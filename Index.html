@@ -18,9 +18,10 @@
             background-color: #f8fafc;
             color: #1e293b;
             line-height: 1.6;
-            padding-bottom: 70px;
+            padding-bottom: 70px; /* Space for bottom quick action bar on mobile */
         }
 
+        /* Top Header & Navigation */
         header {
             background: #0f172a;
             color: #fff;
@@ -57,6 +58,7 @@
             color: #f59e0b;
         }
 
+        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
                         url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200') no-repeat center center/cover;
@@ -120,6 +122,7 @@
             background-color: #128c7e;
         }
 
+        /* Services Grid Section */
         .container {
             padding: 50px 5%;
             max-width: 1200px;
@@ -192,7 +195,7 @@
             font-size: 0.95rem;
         }
 
-        /* Enhanced Payment Section */
+        /* Payment Section */
         .payment-section {
             background: #fff;
             border: 2px solid #f59e0b;
@@ -234,45 +237,34 @@
             margin-top: 5px;
         }
 
-        .gpay-btn {
-            background-color: #000;
+        .pay-now-btn {
+            background-color: #22c55e;
             color: white;
             text-decoration: none;
-            padding: 14px 28px;
+            padding: 12px 25px;
             border-radius: 8px;
             font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            display: inline-block;
             margin-top: 15px;
             transition: 0.3s;
-            font-size: 1.05rem;
         }
 
-        .gpay-btn:hover {
-            background-color: #1f2937;
+        .pay-now-btn:hover {
+            background-color: #16a34a;
         }
 
         .qr-card {
             background: #f8fafc;
-            padding: 20px;
+            padding: 15px;
             border-radius: 12px;
             border: 1px solid #e2e8f0;
             text-align: center;
         }
 
         .qr-card img {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 8px;
-            border: 1px solid #cbd5e1;
-        }
-
-        .app-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-            font-size: 1.8rem;
         }
 
         /* Contact Section */
@@ -320,6 +312,7 @@
             color: #f59e0b;
         }
 
+        /* Direct Email Form */
         .email-form input, .email-form textarea {
             width: 100%;
             padding: 12px;
@@ -348,6 +341,7 @@
             color: #fff;
         }
 
+        /* Fixed Bottom Action Bar for Mobile */
         .bottom-action-bar {
             position: fixed;
             bottom: 0;
@@ -420,6 +414,7 @@
         <h1>S.S ELECTRICAL</h1>
         <p>Expert Industrial Electrical Maintenance, Automation, VFD, Commercial Wiring & Solar Solutions</p>
         <div class="hero-btns">
+            <!-- Edit Mobile Number Here -->
             <a href="tel:+919670141002" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
             <a href="https://wa.me/+919670141002/?text=Hello%20S.S%20Electrical,%20I%20need%20service" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
         </div>
@@ -431,14 +426,16 @@
         
         <div class="services-grid">
             
+            <!-- Service 1 (Updated Image) -->
             <div class="card">
-                <img src="<img src="Screenshot_2026-07-23-00-04-56-91_680d03679600f7af0b4c700c6b270fe7.jpg" alt="Commercial Wiring">-1621905251189-08b45d6a269e?q=80&w=600" alt="Commercial Wiring">
+                <img src="63266_3.jpg" alt="Commercial Wiring">
                 <div class="card-content">
                     <h3><i class="fa-solid fa-bolt"></i> Commercial Wiring & Lighting</h3>
                     <p>Complete wiring, lighting installations, and power setup for commercial buildings and complexes.</p>
                 </div>
             </div>
 
+            <!-- Service 2 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=600" alt="Industrial Automation">
                 <div class="card-content">
@@ -447,6 +444,7 @@
                 </div>
             </div>
 
+            <!-- Service 3 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=600" alt="VFD Drives">
                 <div class="card-content">
@@ -455,6 +453,7 @@
                 </div>
             </div>
 
+            <!-- Service 4 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600" alt="AC Installation">
                 <div class="card-content">
@@ -463,6 +462,7 @@
                 </div>
             </div>
 
+            <!-- Service 5 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?q=80&w=600" alt="Solar Inverter">
                 <div class="card-content">
@@ -471,6 +471,7 @@
                 </div>
             </div>
 
+            <!-- Service 6 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600" alt="Machine Repairing">
                 <div class="card-content">
@@ -479,6 +480,7 @@
                 </div>
             </div>
 
+            <!-- Service 7 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600" alt="Panel Wiring">
                 <div class="card-content">
@@ -487,6 +489,7 @@
                 </div>
             </div>
 
+            <!-- Service 8 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?q=80&w=600" alt="Troubleshooting">
                 <div class="card-content">
@@ -495,6 +498,7 @@
                 </div>
             </div>
 
+            <!-- Service 9 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?q=80&w=600" alt="Maintenance Service">
                 <div class="card-content">
@@ -503,6 +507,7 @@
                 </div>
             </div>
 
+            <!-- Service 10 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600" alt="Batteries Selling">
                 <div class="card-content">
@@ -511,6 +516,7 @@
                 </div>
             </div>
 
+            <!-- Service 11 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=600" alt="Electrical Supplies">
                 <div class="card-content">
@@ -521,29 +527,29 @@
 
         </div>
 
-        <!-- Payment Section (Updated with Google Pay focus) -->
+        <!-- Payment Section -->
         <div class="payment-section" id="payment">
-            <h2 class="section-title" style="margin-bottom: 15px;">Google Pay & Online Payment</h2>
-            <p style="color: #64748b;">Aap Google Pay, PhonePe, ya Paytm se direct payment kar sakte hain.</p>
+            <h2 class="section-title" style="margin-bottom: 15px;">Online Payment Options</h2>
+            <p style="color: #64748b;">Aap kisi bhi UPI App (GPay, PhonePe, Paytm) se online payment kar sakte hain.</p>
             
             <div class="payment-box">
                 <!-- QR Code Display -->
                 <div class="qr-card">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=9670141002@upi&pn=S.S%20Electrical" alt="S.S Electrical Google Pay QR Code">
-                    <p style="margin-top: 10px; font-weight: 600; font-size: 0.95rem;">Scan QR to Pay via Google Pay</p>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=9670141002@upi&pn=S.S%20Electrical" alt="S.S Electrical Payment QR Code">
+                    <p style="margin-top: 8px; font-weight: 600; font-size: 0.9rem;">Scan & Pay via Any App</p>
                 </div>
 
-                <!-- Google Pay & UPI Details -->
+                <!-- Direct UPI Details -->
                 <div class="payment-info">
-                    <p><i class="fa-brands fa-google-pay" style="color: #4285F4; font-size: 1.8rem;"></i> <strong>Google Pay / Mobile No:</strong></p>
-                    <p style="font-size: 1.4rem; color: #0f172a; font-weight: 700; margin-bottom: 10px;">+91 9670141002</p>
+                    <p><i class="fa-brands fa-google-pay" style="color: #4285F4; font-size: 1.5rem;"></i> <strong>Google Pay / PhonePe / Paytm:</strong></p>
+                    <p style="font-size: 1.3rem; color: #0f172a; font-weight: 700;">+91 9670141002</p>
                     
-                    <p><strong>UPI ID:</strong></p>
+                    <p style="margin-top: 15px;"><strong>UPI ID:</strong></p>
                     <div class="upi-id">9670141002@upi</div>
                     <br>
-                    <!-- Google Pay / Instant Mobile App Trigger Button -->
-                    <a href="upi://pay?pa=9670141002@upi&pn=S.S%20Electrical" class="gpay-btn">
-                        <i class="fa-brands fa-google-pay" style="font-size: 1.6rem; color: #4285F4;"></i> Pay with Google Pay / UPI
+                    <!-- Clickable Mobile Payment Link -->
+                    <a href="upi://pay?pa=9670141002@upi&pn=S.S%20Electrical" class="pay-now-btn">
+                        <i class="fa-solid fa-wallet"></i> Pay Now via UPI App
                     </a>
                 </div>
             </div>
@@ -554,6 +560,7 @@
             <h2 style="text-align: center; color: #f59e0b; margin-bottom: 20px;">Contact S.S Electrical</h2>
             
             <div class="contact-grid">
+                <!-- Direct Info -->
                 <div class="contact-box">
                     <h3>Get In Touch</h3>
                     <div class="contact-item">
@@ -574,8 +581,10 @@
                     </div>
                 </div>
 
+                <!-- Direct Email Message Form -->
                 <div class="contact-box">
                     <h3>Send Direct Email</h3>
+                    <!-- Formspree Service for direct email delivery -->
                     <form action="https://formspree.io/f/xbjnqkyw" method="POST" class="email-form">
                         <input type="text" name="name" placeholder="Aapka Naam (Your Name)" required>
                         <input type="tel" name="phone" placeholder="Mobile Number" required>
@@ -585,13 +594,27 @@
                 </div>
             </div>
         </div>
-
     </div>
 
-    <!-- Quick Bottom Action Bar for Mobile -->
+    <!-- Fixed Bottom Quick Action Bar -->
     <div class="bottom-action-bar">
         <a href="tel:+919670141002" class="action-btn action-call">
             <i class="fa-solid fa-phone"></i>
             <span>Call</span>
         </a>
-        <a href="https://wa.me/+919670141002?text=Hello%20S.S%20El
+        <a href="https://wa.me/+919670141002?text=Hello%20S.S%20Electrical" class="action-btn action-wa">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="#payment" class="action-btn action-pay">
+            <i class="fa-solid fa-qrcode"></i>
+            <span>Pay UPI</span>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; S.S Electrical Services. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
