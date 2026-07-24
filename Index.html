@@ -19,7 +19,7 @@
             line-height: 1.6;
             padding-bottom: 70px;
         }
-        /* Top Navigation Header */
+        /* Header */
         header {
             background: #0f172a;
             color: #fff;
@@ -52,7 +52,7 @@
         nav a:hover {
             color: #f59e0b;
         }
-        /* Hero Banner */
+        /* Hero */
         .hero {
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
             color: #fff;
@@ -103,7 +103,7 @@
         .btn-wa { background: #25d366; color: #fff; }
         .btn-wa:hover { background: #128c7e; }
 
-        /* Container & Section Headings */
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 40px auto;
@@ -144,7 +144,7 @@
         /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
             margin-bottom: 50px;
         }
@@ -154,6 +154,9 @@
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
             border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .service-card:hover {
@@ -162,11 +165,15 @@
         }
         .service-card img {
             width: 100%;
-            height: 200px;
+            height: 210px;
             object-fit: cover;
         }
         .service-info {
             padding: 22px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .service-info h3 {
             color: #0f172a;
@@ -182,6 +189,27 @@
         .service-info p {
             color: #64748b;
             font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .btn-enquire {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #0f172a;
+            color: #f59e0b;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid #f59e0b;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        .btn-enquire:hover {
+            background: #f59e0b;
+            color: #0f172a;
         }
 
         /* Payment Section */
@@ -273,7 +301,7 @@
             color: #f59e0b;
         }
 
-        /* Mobile Bottom Bar */
+        /* Mobile Bar */
         .mobile-bottom-bar {
             position: fixed;
             bottom: 0;
@@ -334,7 +362,7 @@
     <section class="hero" id="home">
         <h1>S.S. ELECTRICALS</h1>
         <div class="owner-badge"><i class="fa-solid fa-user-tie"></i> Prop. Shailesh Kumar Rajbhar (S/o Visram Rajbhar)</div>
-        <p>Industrial Control Panels, VFD Drives, AC Installation, Commercial Wiring, Solar Off-Grid & AMC Maintenance Services</p>
+        <p>Complete Industrial, Commercial & Residential Electrical Services, VFD Drives, Control Panels, Solar & Maintenance</p>
         <div class="hero-btns">
             <a href="tel:+919670141002" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call: +91 9670141002</a>
             <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20electrical%20service%20chahiye" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
@@ -346,7 +374,7 @@
         <!-- About Us -->
         <div class="about-card" id="about">
             <h2>About S.S. Electricals</h2>
-            <p><strong>S.S. Electricals</strong> is an established electrical engineering and contracting company managed under the leadership of <strong>Shailesh Kumar Rajbhar</strong>. We provide end-to-end industrial, commercial, and residential electrical services—ranging from custom VFD panel design, PLC control wiring, motor starters, AC setup, solar off-grid systems to annual maintenance contracts (AMC).</p>
+            <p><strong>S.S. Electricals</strong> is an established electrical engineering and contracting firm under the leadership of <strong>Shailesh Kumar Rajbhar</strong>. We deliver end-to-end electrical solutions, including industrial wiring, VFD configuration, panel upgrades, LT equipment, solar off-grid systems, lighting, home automation, and emergency repair services across Jaunpur and nearby regions.</p>
         </div>
 
         <!-- All Services Section -->
@@ -354,51 +382,159 @@
         
         <div class="services-grid">
             
+            <!-- 1. Complete Electrical Projects -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="VFD Installation and Repair">
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=600&q=80" alt="Complete Electrical Projects">
                 <div class="service-info">
-                    <h3><i class="fa-solid fa-sliders"></i> VFD Drive Installation & Parameter Service</h3>
-                    <p>Complete VFD commissioning, drive programming, speed parameter setup, fault troubleshooting, and motor protection for industrial plants.</p>
+                    <div>
+                        <h3><i class="fa-solid fa-city"></i> Complete Electrical Projects</h3>
+                        <p>Turnkey electrical contract execution for commercial complexes, industrial plants, residential societies, and infrastructure setups.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Complete%20Electrical%20Projects%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
                 </div>
             </div>
 
+            <!-- 2. Power Connection -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=600&q=80" alt="Electrical Control Panel">
+                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80" alt="Power Connection">
                 <div class="service-info">
-                    <h3><i class="fa-solid fa-diagram-project"></i> LT / HT Control Panel Wiring</h3>
-                    <p>MCC, PCC, APFC, Star-Delta, and Dol starter panel design, internal wiring testing, contactor replacement, and breaker maintenance.</p>
+                    <div>
+                        <h3><i class="fa-solid fa-plug-circle-bolt"></i> Power Connection Services</h3>
+                        <p>Industrial three-phase power line connections, main line tapping, transformer cable linking, and meter panel integration.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Power%20Connection%20Services%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
                 </div>
             </div>
 
+            <!-- 3. Backup Power and Load Management -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="AC Installation and Service">
+                <img src="https://images.unsplash.com/photo-1590247819200-161485a2777b?auto=format&fit=crop&w=600&q=80" alt="Backup power and Load Management">
                 <div class="service-info">
-                    <h3><i class="fa-solid fa-snowflake"></i> AC Installation & Commercial Cooling</h3>
-                    <p>Split, cassette, and window AC indoor/outdoor installation, copper piping, gas refilling, jet cleaning, and compressor repair.</p>
+                    <div>
+                        <h3><i class="fa-solid fa-charging-station"></i> Backup Power & Load Management</h3>
+                        <p>DG Synchronizing panels, automatic changeover switches (AMF/ATS), load balancing, and UPS/Generator backup setup.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Backup%20power%20and%20Load%20Management%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
                 </div>
             </div>
 
+            <!-- 4. Home Electrical Service -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=600&q=80" alt="Solar Panel Setup">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Home electrical Service">
                 <div class="service-info">
-                    <h3><i class="fa-solid fa-solar-panel"></i> Solar Off-Grid & Inverter Systems</h3>
-                    <p>Home and commercial solar rooftop setup, off-grid inverter (Luminous NXG) installation, solar panel wiring, and battery bank maintenance.</p>
+                    <div>
+                        <h3><i class="fa-solid fa-house-bolt"></i> Home Electrical Services</h3>
+                        <p>Residential house wiring, inverter connections, switchboard repair, MCB tripping fix, and safety earthing for modern homes.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Home%20electrical%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
                 </div>
             </div>
 
+            <!-- 5. Industrial Electrical Service -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Commercial Building Wiring">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Industrial Electrical Service">
                 <div class="service-info">
-                    <h3><i class="fa-solid fa-bolt"></i> Building & Factory Commercial Wiring</h3>
-                    <p>Complete conduit piping, MCB DB fitting, earthing pit installation, cable tray laying, and power load balancing.</p>
+                    <div>
+                        <h3><i class="fa-solid fa-industry"></i> Industrial Electrical Services</h3>
+                        <p>Factory motor wiring, heavy machinery power supplies, busbar trunking, earth pit construction, and plant electrification.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Industrial%20Electrical%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
                 </div>
             </div>
 
+            <!-- 6. Electrical Maintenance -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" alt="Plant Maintenance AMC">
+                <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" alt="Electrical Maintenance">
                 <div class="service-info">
-                    <h3><i class="fa-solid fa-clipboard-check"></i> Industrial AMC & Maintenance</h3>
-                    <p>Preventive maintenance, breakdown fault finding, thermal inspection of switches, and complete factory electrical management.</p>
+                    <div>
+                        <h3><i class="fa-solid fa-wrench"></i> Electrical Maintenance & AMC</h3>
+                        <p>Preventive maintenance contracts, breakdown emergency repair, contactor replacement, and plant safety inspection.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Electrical%20Maintenance%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+                </div>
+            </div>
+
+            <!-- 7. Wiring and Rewiring Service -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Wiring and rewiring Service">
+                <div class="service-info">
+                    <div>
+                        <h3><i class="fa-solid fa-network-wired"></i> Wiring & Rewiring Services</h3>
+                        <p>Old house/factory wire replacement, conduit pipe fitting, cable tray laying, and fire-resistant concealed copper wiring.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Wiring%20and%20rewiring%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+                </div>
+            </div>
+
+            <!-- 8. Electrical Panel Upgrade -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=600&q=80" alt="Electrical Panel Upgrade">
+                <div class="service-info">
+                    <div>
+                        <h3><i class="fa-solid fa-sliders"></i> Electrical Panel Upgrade</h3>
+                        <p>Main distribution board upgrade, MCC switchgear modification, ACB/MCCB replacement, Star-Delta & DOL panel setup.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Electrical%20Panel%20Upgrade%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+                </div>
+            </div>
+
+            <!-- 9. Lighting Installation and Repair -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=600&q=80" alt="Lighting Installation and Repair">
+                <div class="service-info">
+                    <div>
+                        <h3><i class="fa-regular fa-lightbulb"></i> Lighting Installation & Repair</h3>
+                        <p>LED high bay lights, commercial cove lighting, flood lights, architectural fixture fittings, and smart lighting repairs.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Lighting%20Installation%20and%20Repair%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+                </div>
+            </div>
+
+            <!-- 10. LT Equipment Installation and Repair -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=600&q=80" alt="LT equipment installation and repair Service">
+                <div class="service-info">
+                    <div>
+                        <h3><i class="fa-solid fa-gears"></i> LT Equipment Installation & Repair</h3>
+                        <p>LT switchgear, APFC capacitor banks, relay testing, voltage stabilizers, isolators, and heavy-duty contactors maintenance.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20LT%20equipment%20installation%20and%20repair%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+                </div>
+            </div>
+
+            <!-- 11. AC Installation and Service -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="AC installation and Service">
+                <div class="service-info">
+                    <div>
+                        <h3><i class="fa-solid fa-snowflake"></i> AC Installation & Service</h3>
+                        <p>Split & Cassette AC fitting, copper piping work, gas refilling, jet wash service, and compressor breakdown servicing.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20AC%20installation%20and%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+                </div>
+            </div>
+
+            <!-- 12. Solar Inverter System Installation and Service -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=600&q=80" alt="Solar inverter System Installation and Service">
+                <div class="service-info">
+                    <div>
+                        <h3><i class="fa-solid fa-solar-panel"></i> Solar Inverter System Installation</h3>
+                        <p>Off-grid solar rooftops (Luminous NXG), solar panel wiring, MPPT charge controllers, battery bank setup & maintenance.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Solar%20inverter%20System%20Installation%20and%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+                </div>
+            </div>
+
+            <!-- 13. VFD Installation and Service -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="VFD Installation and Service">
+                <div class="service-info">
+                    <div>
+                        <h3><i class="fa-solid fa-microchip"></i> VFD Installation & Service</h3>
+                        <p>Variable Frequency Drive (VFD) parameter setup, speed control wiring, external terminal testing, and drive fault repair.</p>
+                    </div>
+                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20VFD%20Installation%20and%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
                 </div>
             </div>
 
