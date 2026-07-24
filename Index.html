@@ -3,628 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S.S Electrical - Industrial, Commercial & Automation Services</title>
-    <!-- Font Awesome for Icons -->
+    <title>S.S. Electricals - Electrical Contractors & Industrial Services</title>
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
-            background-color: #f8fafc;
-            color: #1e293b;
+            background-color: #f4f7f6;
+            color: #333;
             line-height: 1.6;
-            padding-bottom: 70px;
         }
-
-        /* Top Header & Navigation */
+        /* Header & Navigation */
         header {
-            background: #0f172a;
-            color: #fff;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
         }
-
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 800;
-            color: #f59e0b;
-            letter-spacing: 1px;
+            color: #0b2545;
         }
-
         .logo span {
-            color: #38bdf8;
+            color: #d97706;
         }
-
         nav a {
-            color: #f8fafc;
             text-decoration: none;
+            color: #333;
             margin-left: 20px;
             font-weight: 600;
             transition: color 0.3s;
         }
-
         nav a:hover {
-            color: #f59e0b;
+            color: #d97706;
         }
-
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                        url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200') no-repeat center center/cover;
-            height: 75vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(11, 37, 69, 0.85)), url('32843.jpg') center/cover no-repeat;
             color: #fff;
-            padding: 0 20px;
+            text-align: center;
+            padding: 100px 20px;
         }
-
         .hero h1 {
             font-size: 2.8rem;
             margin-bottom: 10px;
-            color: #f59e0b;
+            color: #facc15;
         }
-
-        .owner-badge {
-            font-size: 1.1rem;
-            background: rgba(245, 158, 11, 0.2);
-            border: 1px solid #f59e0b;
-            padding: 5px 15px;
-            border-radius: 20px;
-            margin-bottom: 15px;
-            color: #38bdf8;
-            font-weight: 600;
-        }
-
         .hero p {
-            font-size: 1.1rem;
-            max-width: 750px;
-            margin-bottom: 25px;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
             color: #e2e8f0;
         }
-
-        .hero-btns {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
         .btn {
-            padding: 12px 25px;
+            display: inline-block;
+            background: #d97706;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 6px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
+            transition: background 0.3s;
         }
-
-        .btn-primary {
-            background-color: #f59e0b;
-            color: #0f172a;
+        .btn:hover {
+            background: #b45309;
         }
-
-        .btn-primary:hover {
-            background-color: #d97706;
-            color: #fff;
-        }
-
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: #fff;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
-        }
-
-        /* Services Grid Section */
+        /* Main Container */
         .container {
-            padding: 50px 5%;
             max-width: 1200px;
-            margin: auto;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-
         .section-title {
             text-align: center;
             font-size: 2.2rem;
             margin-bottom: 40px;
-            color: #0f172a;
-            position: relative;
+            color: #0b2545;
         }
-
         .section-title::after {
             content: '';
-            width: 80px;
-            height: 4px;
-            background: #f59e0b;
             display: block;
+            width: 60px;
+            height: 4px;
+            background: #d97706;
             margin: 10px auto 0;
             border-radius: 2px;
         }
-
+        /* About Section */
+        .about-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+        .about-box h2 {
+            color: #0b2545;
+            margin-bottom: 15px;
+        }
+        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            margin-bottom: 50px;
         }
-
-        .card {
+        .service-card {
             background: #fff;
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
         }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        .service-card:hover {
+            transform: translateY(-5px);
         }
-
-        .card img {
+        .service-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
-
-        .card-content {
+        .service-content {
             padding: 20px;
         }
-
-        .card-content h3 {
-            font-size: 1.25rem;
-            color: #0f172a;
+        .service-content h3 {
+            color: #0b2545;
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
-
-        .card-content h3 i {
-            color: #f59e0b;
-        }
-
-        .card-content p {
-            color: #64748b;
-            font-size: 0.95rem;
-        }
-
-        /* Payment Section */
-        .payment-section {
-            background: #fff;
-            border: 2px solid #f59e0b;
-            border-radius: 15px;
-            padding: 40px 20px;
-            margin-top: 50px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-
-        .payment-box {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin-top: 25px;
-        }
-
-        .payment-info {
-            max-width: 400px;
-            text-align: left;
-        }
-
-        .payment-info p {
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            color: #334155;
-        }
-
-        .upi-id {
-            background: #f1f5f9;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            color: #0f172a;
-            border: 1px dashed #94a3b8;
-            display: inline-block;
-            margin-top: 5px;
-        }
-
-        .pay-now-btn {
-            background-color: #22c55e;
-            color: white;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 15px;
-            transition: 0.3s;
-        }
-
-        .pay-now-btn:hover {
-            background-color: #16a34a;
-        }
-
-        .qr-card {
-            background: #f8fafc;
-            padding: 15px;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            text-align: center;
-        }
-
-        .qr-card img {
-            width: 180px;
-            height: 180px;
-            border-radius: 8px;
-        }
-
         /* Contact Section */
-        .contact-section {
-            background: #0f172a;
-            color: #fff;
-            padding: 50px 5%;
-            border-radius: 15px;
-            margin-top: 40px;
-        }
-
-        .contact-grid {
+        .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 30px;
+            background: #0b2545;
+            color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            margin-bottom: 40px;
         }
-
-        .contact-box h3 {
-            color: #f59e0b;
+        .contact-info p {
             margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        .contact-item {
             display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-        }
-
-        .contact-item i {
-            color: #38bdf8;
-            font-size: 1.3rem;
-            width: 25px;
-            margin-top: 3px;
-        }
-
-        .contact-item a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            color: #f59e0b;
-        }
-
-        /* Direct Form */
-        .email-form input, .email-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 12px;
-            border-radius: 6px;
-            border: 1px solid #334155;
-            background: #1e293b;
-            color: #fff;
-            font-size: 0.95rem;
-        }
-
-        .email-form button {
-            background: #25d366;
-            color: #fff;
-            border: none;
-            padding: 12px 20px;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-            transition: 0.3s;
-        }
-
-        .email-form button:hover {
-            background: #128c7e;
-        }
-
-        /* Fixed Bottom Action Bar for Mobile */
-        .bottom-action-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #0f172a;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-            z-index: 2000;
-        }
-
-        .action-btn {
-            color: #fff;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
             align-items: center;
-            font-size: 0.8rem;
-            font-weight: 600;
+            gap: 12px;
         }
-
-        .action-btn i {
-            font-size: 1.3rem;
-            margin-bottom: 3px;
+        .contact-info i {
+            color: #facc15;
+            font-size: 1.2rem;
         }
-
-        .action-call i { color: #38bdf8; }
-        .action-wa i { color: #25d366; }
-        .action-pay i { color: #f59e0b; }
-
         footer {
+            text-align: center;
             background: #020617;
             color: #94a3b8;
-            text-align: center;
             padding: 20px;
             font-size: 0.9rem;
         }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .payment-info {
-                text-align: center;
-            }
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
-        <div class="logo">S.S <span>ELECTRICAL</span></div>
+        <div class="logo">S.S <span>ELECTRICALS</span></div>
         <nav>
             <a href="#home">Home</a>
+            <a href="#about">About Us</a>
             <a href="#services">Services</a>
-            <a href="#payment">Payment</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>S.S ELECTRICAL</h1>
-        <div class="owner-badge"><i class="fa-solid fa-user-tie"></i> Prop. Shailesh Kumar Rajbhar (S/o Visram Rajbhar)</div>
-        <p>Expert Industrial Electrical Maintenance, Automation, VFD, Commercial Wiring & Solar Solutions</p>
-        <div class="hero-btns">
-            <a href="tel:+919670141002" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
-            <a href="https://wa.me/+919670141002/?text=Hello%20Shailesh%20Ji,%20I%20need%20electrical%20service" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
-        </div>
+        <h1>S.S. ELECTRICALS</h1>
+        <p>Professional Electrical Contractors, Industrial Wiring, VFD & Automation Service Provider</p>
+        <a href="tel:+919670141002" class="btn"><i class="fa-solid fa-phone"></i> Call Now: +91 9670141002</a>
     </section>
 
-    <!-- Services Section -->
-    <div class="container" id="services">
-        <h2 class="section-title">Our Services</h2>
-        
-        <div class="services-grid">
-            
-            <!-- Service 1 -->
-            <div class="card">
-                <img src="63266_2.jpg" alt="Commercial Wiring">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-bolt"></i> Commercial Wiring & Lighting</h3>
-                    <p>Complete wiring, lighting installations, and power setup for commercial buildings and complexes.</p>
-                </div>
-            </div>
+    <div class="container">
 
-            <!-- Service 2 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=600" alt="Industrial Automation">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-microchip"></i> Industrial Automation & Service</h3>
-                    <p>PLC programming, plant automation, relay logic setups, and complete industrial system maintenance.</p>
-                </div>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=600" alt="VFD Drives">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-sliders"></i> All VFD Installation & Service</h3>
-                    <p>Sales, drive programming, parameter tuning, troubleshooting, and repairs for all VFD brands.</p>
-                </div>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600" alt="AC Installation">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-snowflake"></i> AC Installation & Service</h3>
-                    <p>Split, Window, and Commercial Air Conditioner installation, gas refilling, and maintenance services.</p>
-                </div>
-            </div>
-
-            <!-- Service 5 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?q=80&w=600" alt="Solar Inverter">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-solar-panel"></i> Solar Inverter System Service</h3>
-                    <p>Complete rooftop solar inverter setup, installation, grid integration, and battery maintenance.</p>
-                </div>
-            </div>
-
-            <!-- Service 6 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600" alt="Machine Repairing">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-gears"></i> Industrial Machines Repairing</h3>
-                    <p>Expert electrical troubleshooting and control panel repairs for heavy manufacturing machinery.</p>
-                </div>
-            </div>
-
-            <!-- Service 7 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600" alt="Panel Wiring">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-diagram-project"></i> Electrical Panel Wiring</h3>
-                    <p>Custom MCC, PCC, APFC, and starter control panel designing, fabrication, and clean wiring work.</p>
-                </div>
-            </div>
-
-            <!-- Service 8 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?q=80&w=600" alt="Troubleshooting">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-triangle-exclamation"></i> Electrical Troubleshooting</h3>
-                    <p>Rapid fault finding, short-circuit recovery, cable testing, and emergency breakdown services.</p>
-                </div>
-            </div>
-
-            <!-- Service 9 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?q=80&w=600" alt="Maintenance Service">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-wrench-screwdriver"></i> Maintenance Service (AMC)</h3>
-                    <p>Preventive maintenance contracts for factories, industries, and commercial establishments.</p>
-                </div>
-            </div>
-
-            <!-- Service 10 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600" alt="Batteries Selling">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-car-battery"></i> All Types Batteries Selling</h3>
-                    <p>Sales of high-quality tubular batteries, industrial battery banks, UPS batteries, and invertors.</p>
-                </div>
-            </div>
-
-            <!-- Service 11 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=600" alt="Electrical Supplies">
-                <div class="card-content">
-                    <h3><i class="fa-solid fa-plug"></i> Electrical Maintenance & Supplies</h3>
-                    <p>All types of electrical goods, switchgears, cables, MCCBs, and overall plant repair services.</p>
-                </div>
-            </div>
-
+        <!-- About Us -->
+        <div class="about-box" id="about">
+            <h2>About S.S. Electricals</h2>
+            <p><strong>S.S. Electricals</strong> is a professional electrical contracting and service firm. Managed under the proprietorship of <strong>Shailesh Kumar Rajbhar (S/o Visram Rajbhar)</strong>, we specialize in high-quality electrical installations, LT/HT systems, industrial control panel wiring, VFD configuration, and comprehensive maintenance solutions. We are dedicated to delivering reliable, safe, and efficient power solutions.</p>
         </div>
 
-        <!-- Payment Section -->
-        <div class="payment-section" id="payment">
-            <h2 class="section-title" style="margin-bottom: 15px;">Online Payment Options</h2>
-            <p style="color: #64748b;">Aap kisi bhi UPI App (GPay, PhonePe, Paytm) se online payment kar sakte hain.</p>
+        <!-- Services Section -->
+        <h2 class="section-title" id="services">Our Professional Services</h2>
+        <div class="services-grid">
             
-            <div class="payment-box">
-                <!-- QR Code Display -->
-                <div class="qr-card">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=9670141002@upi&pn=Shailesh%20Kumar%20Rajbhar" alt="S.S Electrical Payment QR Code">
-                    <p style="margin-top: 8px; font-weight: 600; font-size: 0.9rem;">Scan & Pay via Any App</p>
-                </div>
-
-                <!-- Direct UPI Details -->
-                <div class="payment-info">
-                    <p><i class="fa-brands fa-google-pay" style="color: #4285F4; font-size: 1.5rem;"></i> <strong>Google Pay / PhonePe / Paytm:</strong></p>
-                    <p style="font-size: 1.3rem; color: #0f172a; font-weight: 700;">+91 9670141002</p>
-                    
-                    <p style="margin-top: 15px;"><strong>UPI ID:</strong></p>
-                    <div class="upi-id">9670141002@upi</div>
-                    <br>
-                    <a href="upi://pay?pa=9670141002@upi&pn=Shailesh%20Kumar%20Rajbhar" class="pay-now-btn">
-                        <i class="fa-solid fa-wallet"></i> Pay Now via UPI App
-                    </a>
+            <div class="service-card">
+                <img src="32843.jpg" alt="Control Panel Wiring">
+                <div class="service-content">
+                    <h3>Electrical Panel Installation</h3>
+                    <p>Complete setup, testing, and maintenance of industrial power distribution and control panels.</p>
                 </div>
             </div>
+
+            <div class="service-card">
+                <img src="vfd-work.jpg" alt="VFD Services">
+                <div class="service-content">
+                    <h3>VFD Drives Service</h3>
+                    <p>Expert VFD programming, parameter tuning, troubleshooting, and drive maintenance.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="ac-work.jpg" alt="AC & Cooling Services">
+                <div class="service-content">
+                    <h3>AC Installation & Maintenance</h3>
+                    <p>Commercial and residential air conditioner installation, servicing, and gas charging.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="34056.jpg" alt="Industrial Maintenance">
+                <div class="service-content">
+                    <h3>Industrial Wiring & AMC</h3>
+                    <p>Comprehensive electrical maintenance contracts, wiring, rewiring, and plant safety upgrades.</p>
+                </div>
+            </div>
+
         </div>
 
         <!-- Contact Section -->
-        <div class="contact-section" id="contact">
-            <h2 style="text-align: center; color: #f59e0b; margin-bottom: 20px;">Contact S.S Electrical</h2>
-            
-            <div class="contact-grid">
-                <!-- Direct Info -->
-                <div class="contact-box">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-item" style="margin-bottom: 8px;">
-                        <i class="fa-solid fa-user-tie"></i>
-                        <span><strong>Proprietor:</strong> Shailesh Kumar Rajbhar<br><small style="color:#94a3b8;">S/o Visram Rajbhar</small></span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Kalapur, Khetasarai, Shahganj, Jaunpur, Uttar Pradesh, India 222139</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <a href="tel:+919670141002">+919670141002</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji">WhatsApp Message Karein</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:sselectricalservice95@gmail.com">sselectricalservice95@gmail.com</a>
-                    </div>
-                </div>
-
-                <!-- Direct WhatsApp Message Form (Fixed Error) -->
-                <div class="contact-box">
-                    <h3>Send Direct Message (WhatsApp)</h3>
-                    <form action="https://wa.me/919670141002" method="GET" target="_blank" class="email-form">
-                        <input type="text" name="text" placeholder="Aapka Naam aur Kaam ki jaankari..." required>
-                        <button type="submit"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
-                    </form>
-                </div>
+        <div class="contact-container" id="contact">
+            <div class="contact-info">
+                <h2 style="color: #facc15; margin-bottom: 20px;">Get In Touch</h2>
+                <p><i class="fa-solid fa-user-tie"></i> <strong>Proprietor:</strong> Shailesh Kumar Rajbhar (S/o Visram Rajbhar)</p>
+                <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Kalapur, Khetasarai, Shahganj, Jaunpur, UP - 222139</p>
+                <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> +91 9670141002</p>
+                <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> sselectricalservice95@gmail.com</p>
+            </div>
+            <div>
+                <h2 style="color: #facc15; margin-bottom: 20px;">Quick Inquiry</h2>
+                <p>For urgent electrical support, panel breakdowns, or service bookings, contact us directly via call or WhatsApp.</p>
+                <br>
+                <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20I%20need%20electrical%20service" class="btn" style="background: #25d366;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
             </div>
         </div>
+
     </div>
 
-    <!-- Fixed Bottom Quick Action Bar -->
-    <div class="bottom-action-bar">
-        <a href="tel:+919670141002" class="action-btn action-call">
-            <i class="fa-solid fa-phone"></i>
-            <span>Call</span>
-        </a>
-        <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji" class="action-btn action-wa">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp</span>
-        </a>
-        <a href="#payment" class="action-btn action-pay">
-            <i class="fa-solid fa-qrcode"></i>
-            <span>Pay UPI</span>
-        </a>
-    </div>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 S.S Electrical Services. All Rights Reserved. (Prop. Shailesh Kumar Rajbhar)</p>
+        <p>&copy; 2026 S.S. Electricals. All Rights Reserved. | Designed for Shailesh Kumar Rajbhar</p>
     </footer>
 
 </body>
