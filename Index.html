@@ -18,7 +18,7 @@
             background-color: #f8fafc;
             color: #1e293b;
             line-height: 1.6;
-            padding-bottom: 70px; /* Space for bottom quick action bar on mobile */
+            padding-bottom: 70px;
         }
 
         /* Top Header & Navigation */
@@ -62,7 +62,7 @@
         .hero {
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
                         url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200') no-repeat center center/cover;
-            height: 70vh;
+            height: 75vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -74,14 +74,25 @@
 
         .hero h1 {
             font-size: 2.8rem;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #f59e0b;
         }
 
+        .owner-badge {
+            font-size: 1.1rem;
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid #f59e0b;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            color: #38bdf8;
+            font-weight: 600;
+        }
+
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             max-width: 750px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             color: #e2e8f0;
         }
 
@@ -291,7 +302,7 @@
 
         .contact-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 15px;
             margin-bottom: 15px;
             font-size: 1.05rem;
@@ -301,6 +312,7 @@
             color: #38bdf8;
             font-size: 1.3rem;
             width: 25px;
+            margin-top: 3px;
         }
 
         .contact-item a {
@@ -312,7 +324,7 @@
             color: #f59e0b;
         }
 
-        /* Direct Email Form */
+        /* Direct Form */
         .email-form input, .email-form textarea {
             width: 100%;
             padding: 12px;
@@ -325,8 +337,8 @@
         }
 
         .email-form button {
-            background: #f59e0b;
-            color: #0f172a;
+            background: #25d366;
+            color: #fff;
             border: none;
             padding: 12px 20px;
             font-weight: bold;
@@ -337,8 +349,7 @@
         }
 
         .email-form button:hover {
-            background: #d97706;
-            color: #fff;
+            background: #128c7e;
         }
 
         /* Fixed Bottom Action Bar for Mobile */
@@ -412,11 +423,11 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <h1>S.S ELECTRICAL</h1>
+        <div class="owner-badge"><i class="fa-solid fa-user-tie"></i> Prop. Shailesh Kumar Rajbhar (S/o Visram Rajbhar)</div>
         <p>Expert Industrial Electrical Maintenance, Automation, VFD, Commercial Wiring & Solar Solutions</p>
         <div class="hero-btns">
-            <!-- Edit Mobile Number Here -->
             <a href="tel:+919670141002" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
-            <a href="https://wa.me/+919670141002/?text=Hello%20S.S%20Electrical,%20I%20need%20service" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+            <a href="https://wa.me/+919670141002/?text=Hello%20Shailesh%20Ji,%20I%20need%20electrical%20service" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
         </div>
     </section>
 
@@ -426,9 +437,9 @@
         
         <div class="services-grid">
             
-            <!-- Service 1 (Updated Image) -->
+            <!-- Service 1 -->
             <div class="card">
-                <img src="63266_3.jpg" alt="Commercial Wiring">
+                <img src="63266_2.jpg" alt="Commercial Wiring">
                 <div class="card-content">
                     <h3><i class="fa-solid fa-bolt"></i> Commercial Wiring & Lighting</h3>
                     <p>Complete wiring, lighting installations, and power setup for commercial buildings and complexes.</p>
@@ -535,7 +546,7 @@
             <div class="payment-box">
                 <!-- QR Code Display -->
                 <div class="qr-card">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=9670141002@upi&pn=S.S%20Electrical" alt="S.S Electrical Payment QR Code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=9670141002@upi&pn=Shailesh%20Kumar%20Rajbhar" alt="S.S Electrical Payment QR Code">
                     <p style="margin-top: 8px; font-weight: 600; font-size: 0.9rem;">Scan & Pay via Any App</p>
                 </div>
 
@@ -547,8 +558,7 @@
                     <p style="margin-top: 15px;"><strong>UPI ID:</strong></p>
                     <div class="upi-id">9670141002@upi</div>
                     <br>
-                    <!-- Clickable Mobile Payment Link -->
-                    <a href="upi://pay?pa=9670141002@upi&pn=S.S%20Electrical" class="pay-now-btn">
+                    <a href="upi://pay?pa=9670141002@upi&pn=Shailesh%20Kumar%20Rajbhar" class="pay-now-btn">
                         <i class="fa-solid fa-wallet"></i> Pay Now via UPI App
                     </a>
                 </div>
@@ -563,9 +573,13 @@
                 <!-- Direct Info -->
                 <div class="contact-box">
                     <h3>Get In Touch</h3>
+                    <div class="contact-item" style="margin-bottom: 8px;">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span><strong>Proprietor:</strong> Shailesh Kumar Rajbhar<br><small style="color:#94a3b8;">S/o Visram Rajbhar</small></span>
+                    </div>
                     <div class="contact-item">
                         <i class="fa-solid fa-location-dot"></i>
-                        <span>159 Kalapur, Khetasarai, Jaunpur, Uttar Pradesh, India 222139</span>
+                        <span>Kalapur, Khetasarai, Shahganj, Jaunpur, Uttar Pradesh, India 222139</span>
                     </div>
                     <div class="contact-item">
                         <i class="fa-solid fa-phone"></i>
@@ -573,7 +587,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fa-brands fa-whatsapp"></i>
-                        <a href="https://wa.me/+919670141002?text=Hello%20S.S%20Electrical">WhatsApp Message Karein</a>
+                        <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji">WhatsApp Message Karein</a>
                     </div>
                     <div class="contact-item">
                         <i class="fa-solid fa-envelope"></i>
@@ -581,15 +595,12 @@
                     </div>
                 </div>
 
-                <!-- Direct Email Message Form -->
+                <!-- Direct WhatsApp Message Form (Fixed Error) -->
                 <div class="contact-box">
-                    <h3>Send Direct Email</h3>
-                    <!-- Formspree Service for direct email delivery -->
-                    <form action="https://formspree.io/f/xbjnqkyw" method="POST" class="email-form">
-                        <input type="text" name="name" placeholder="Aapka Naam (Your Name)" required>
-                        <input type="tel" name="phone" placeholder="Mobile Number" required>
-                        <textarea name="message" rows="4" placeholder="Kya kaam karwana hai? (Your Requirement)" required></textarea>
-                        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    <h3>Send Direct Message (WhatsApp)</h3>
+                    <form action="https://wa.me/919670141002" method="GET" target="_blank" class="email-form">
+                        <input type="text" name="text" placeholder="Aapka Naam aur Kaam ki jaankari..." required>
+                        <button type="submit"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
                     </form>
                 </div>
             </div>
@@ -602,7 +613,7 @@
             <i class="fa-solid fa-phone"></i>
             <span>Call</span>
         </a>
-        <a href="https://wa.me/+919670141002?text=Hello%20S.S%20Electrical" class="action-btn action-wa">
+        <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji" class="action-btn action-wa">
             <i class="fa-brands fa-whatsapp"></i>
             <span>WhatsApp</span>
         </a>
@@ -613,7 +624,7 @@
     </div>
 
     <footer>
-        <p>&copy; S.S Electrical Services. All Rights Reserved.</p>
+        <p>&copy; 2026 S.S Electrical Services. All Rights Reserved. (Prop. Shailesh Kumar Rajbhar)</p>
     </footer>
 
 </body>
