@@ -1,180 +1,247 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrical Services & VFD Solutions</title>
-    <!-- FontAwesome icons ke liye link -->
+    <title>Industrial Electrical & VFD Specialist</title>
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --accent-blue: #00d2ff;
+            --accent-green: #00e676;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
         body {
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             padding: 40px 20px;
         }
 
-        .section-title {
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-header {
             text-align: center;
-            font-size: 2.2rem;
-            color: #1a252f;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #fff;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
+        .section-header h2 span {
+            color: var(--accent-blue);
         }
 
-        /* --- OWNER SECTION --- */
-        .owner-section {
-            background: #ffffff;
-            border-radius: 15px;
-            padding: 30px;
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        /* --- OWNER HERO SECTION --- */
+        .owner-hero {
+            background: linear-gradient(145deg, #161b22, #0d1117);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
-            gap: 30px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            margin-bottom: 60px;
+            gap: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            margin-bottom: 70px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .owner-img-container {
-            flex: 1;
-            min-width: 250px;
-            text-align: center;
+        .owner-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 6px; height: 100%;
+            background: var(--accent-blue);
+        }
+
+        .owner-img-wrapper {
+            position: relative;
+            flex-shrink: 0;
         }
 
         .owner-img {
             width: 220px;
             height: 220px;
-            border-radius: 50%;
+            border-radius: 20px;
             object-fit: cover;
-            border: 5px solid #0056b3;
-            box-shadow: 0 8px 15px rgba(0,86,179,0.2);
+            border: 2px solid var(--accent-blue);
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.3);
         }
 
-        .owner-info {
-            flex: 2;
-            min-width: 300px;
+        .verified-badge {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            background: var(--accent-green);
+            color: #000;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .owner-info h2 {
-            color: #0056b3;
-            font-size: 1.8rem;
+        .owner-details h1 {
+            font-size: 2rem;
             margin-bottom: 5px;
         }
 
-        .owner-info h4 {
-            color: #28a745;
+        .owner-details .title {
+            color: var(--accent-blue);
             font-size: 1.1rem;
+            font-weight: 600;
             margin-bottom: 15px;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        .owner-details .bio {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Badges Grid */
+        .achievements-grid {
+            display: flex;
             gap: 15px;
-            margin-top: 20px;
+            flex-wrap: wrap;
         }
 
-        .stat-card {
-            background: #f8f9fa;
-            border-left: 4px solid #0056b3;
-            padding: 12px;
-            border-radius: 6px;
+        .achievement-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-color);
+            padding: 10px 18px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .stat-card h3 {
-            color: #0056b3;
-            font-size: 1.3rem;
+        .achievement-card i {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
         }
 
-        .stat-card p {
-            font-size: 0.85rem;
-            color: #555;
+        .achievement-card div strong {
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        .achievement-card div span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
         }
 
         /* --- SERVICES SECTION --- */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
         .service-card {
-            background: #fff;
-            border-radius: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15);
         }
 
-        .service-img {
+        .service-img-box {
+            position: relative;
+            height: 210px;
+            overflow: hidden;
+        }
+
+        .service-img-box img {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-img-box img {
+            transform: scale(1.08);
+        }
+
+        .service-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(13, 17, 23, 0.85);
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
         }
 
         .service-content {
-            padding: 20px;
+            padding: 25px;
         }
 
         .service-content h3 {
-            color: #1a252f;
-            margin-bottom: 10px;
             font-size: 1.3rem;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
         .service-content h3 i {
-            color: #0056b3;
+            color: var(--accent-blue);
         }
 
         .service-content p {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.5;
         }
 
-        .badge {
-            display: inline-block;
-            background: #e1f0ff;
-            color: #0056b3;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ddd;
-            margin: 40px 0;
+        @media (max-width: 768px) {
+            .owner-hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .achievements-grid {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -183,72 +250,90 @@
     <div class="container">
         
         <!-- OWNER PROFILE SECTION -->
-        <h2 class="section-title">Meet The Specialist</h2>
-        <p class="section-subtitle">Expertise, Quality & Trust in Electrical Engineering</p>
-        
-        <div class="owner-section">
-            <div class="owner-img-container">
-                <!-- Aapki Photo Ka Link Yaha Aayega -->
-                <img src="YOUR_IMAGE_LINK_HERE.jpg" alt="Owner Profile Photo" class="owner-img">
+        <div class="owner-hero">
+            <div class="owner-img-wrapper">
+                <!-- PHOTO LINK HERE -->
+                <img src="YOUR_IMAGE_LINK.jpg" alt="Owner Photo" class="owner-img">
+                <div class="verified-badge">
+                    <i class="fa-solid fa-shield-halved"></i> VERIFIED EXPERT
+                </div>
             </div>
-            <div class="owner-info">
-                <h2>Electrical & VFD Automation Engineer</h2>
-                <h4><i class="fa-solid fa-circle-check"></i> Certified Industry Specialist</h4>
-                <p>Industrial Control Panels, VFD Programming, PLC Wiring, aur Solar Power Systems me high-quality troubleshooting aur installation services provide karte hain.</p>
-                
-                <!-- Achievements / Stats -->
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <h3>100%</h3>
-                        <p>Safety Track Record</p>
+
+            <div class="owner-details">
+                <h1>Electrical & Control Engineer</h1>
+                <div class="title">VFD, PLC & Heavy Industrial Automation Specialist</div>
+                <p class="bio">
+                    इंडस्ट्रियल VFD ड्राइव्स, कंट्रोल वायरिंग, और हाई-वोल्टेज पैनल की ट्रबलशूटिंग के विशेषज्ञ। अंतरराष्ट्रीय मानकों के अनुसार सुरक्षित और सटीक इलेक्ट्रिकल सॉल्यूशंस देने के लिए प्रतिबद्ध।
+                </p>
+
+                <!-- Key Achievements -->
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <i class="fa-solid fa-microchip"></i>
+                        <div>
+                            <strong>VFD & PLC</strong>
+                            <span>Expert Programming</span>
+                        </div>
                     </div>
-                    <div class="stat-card">
-                        <h3>VFD & PLC</h3>
-                        <p>Programming Experts</p>
+                    <div class="achievement-card">
+                        <i class="fa-solid fa-gears"></i>
+                        <div>
+                            <strong>Control Wiring</strong>
+                            <span>Fault Diagnosis</span>
+                        </div>
                     </div>
-                    <div class="stat-card">
-                        <h3>Industrial</h3>
-                        <p>Grade Solutions</p>
+                    <div class="achievement-card">
+                        <i class="fa-solid fa-bolt"></i>
+                        <div>
+                            <strong>Zero Hazard</strong>
+                            <span>Safety Protocol</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <hr>
-
-        <!-- SERVICES SECTION WITH PROFESSIONAL IMAGES -->
-        <h2 class="section-title">Our Professional Services</h2>
-        <p class="section-subtitle">High Performance Electrical & Automation Solutions</p>
+        <!-- SERVICES SECTION -->
+        <div class="section-header">
+            <h2>Our <span>Specialized</span> Services</h2>
+            <p>Advanced Industrial Electrical Solutions & Maintenance</p>
+        </div>
 
         <div class="services-grid">
             
-            <!-- Service 1: VFD Programming & Panel -->
+            <!-- Service 1 -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="VFD & Panel Wiring" class="service-img">
+                <div class="service-img-box">
+                    <span class="service-tag">VFD Automation</span>
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="VFD Control Panel">
+                </div>
                 <div class="service-content">
-                    <span class="badge">Industrial Automation</span>
-                    <h3><i class="fa-solid fa-microchip"></i> VFD & Panel Control Wiring</h3>
-                    <p>VFD installation, parameter programming, Fault diagnosis, aur PLC control wiring system maintenance.</p>
+                    <h3><i class="fa-solid fa-sliders"></i> VFD Programming & Repair</h3>
+                    <p>VFD पैरामीटर सेटिंग, स्पीड कंट्रोल, ओवरलोड प्रोटेक्शन और कंट्रोल पैनल ट्रबलशूटिंग सर्विस।</p>
                 </div>
             </div>
 
-            <!-- Service 2: Industrial Electrical Work -->
+            <!-- Service 2 -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Industrial Electrical Work" class="service-img">
+                <div class="service-img-box">
+                    <span class="service-tag">Heavy Duty</span>
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Industrial Electrician">
+                </div>
                 <div class="service-content">
-                    <span class="badge">Heavy Electrical</span>
-                    <h3><i class="fa-solid fa-bolt"></i> Industrial Power & Wiring</h3>
-                    <p>Heavy motor testing, 3-phase power distribution, circuit breakers, and industrial equipment maintenance.</p>
+                    <h3><i class="fa-solid fa-network-wired"></i> Control Wiring & Panels</h3>
+                    <p>3-फेज मोटर कंट्रोल सर्किट, स्टार-डेल्टा स्टार्टर, रिले लॉजिक और इंडस्ट्रियल वायरिंग डायग्राम वर्क।</p>
                 </div>
             </div>
 
-            <!-- Service 3: Solar Installation -->
+            <!-- Service 3 -->
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=600&q=80" alt="Solar Systems" class="service-img">
+                <div class="service-img-box">
+                    <span class="service-tag">Solar Power</span>
+                    <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solar Inverter System">
+                </div>
                 <div class="service-content">
-                    <span class="badge">Renewable Energy</span>
-                    <h3><i class="fa-solid fa-solar-panel"></i> Off-Grid & On-Grid Solar</h3>
-                    <p>Solar inverter setup, High-efficiency panels installation, and complete off-grid solar solutions.</p>
+                    <h3><i class="fa-solid fa-solar-panel"></i> Off-Grid Solar Setup</h3>
+                    <p>सोलर इनवर्टर, Waaree/Luminous बैटरी बैंक इंस्टॉलेशन और कंप्लीट होम/इंडस्ट्री पावर बैकअप सॉल्यूशन।</p>
                 </div>
             </div>
 
