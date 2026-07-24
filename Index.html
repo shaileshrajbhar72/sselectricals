@@ -14,8 +14,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #f8fafc;
+            color: #1e293b;
             line-height: 1.6;
         }
         /* Header & Navigation */
@@ -33,14 +33,14 @@
         .logo {
             font-size: 1.6rem;
             font-weight: 800;
-            color: #0b2545;
+            color: #0f172a;
         }
         .logo span {
             color: #d97706;
         }
         nav a {
             text-decoration: none;
-            color: #333;
+            color: #334155;
             margin-left: 20px;
             font-weight: 600;
             transition: color 0.3s;
@@ -50,7 +50,7 @@
         }
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(11, 37, 69, 0.85)), url('32843.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: #fff;
             text-align: center;
             padding: 100px 20px;
@@ -89,7 +89,7 @@
             text-align: center;
             font-size: 2.2rem;
             margin-bottom: 40px;
-            color: #0b2545;
+            color: #0f172a;
         }
         .section-title::after {
             content: '';
@@ -107,9 +107,10 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             margin-bottom: 50px;
+            border-left: 5px solid #d97706;
         }
         .about-box h2 {
-            color: #0b2545;
+            color: #0f172a;
             margin-bottom: 15px;
         }
         /* Services Grid */
@@ -138,15 +139,20 @@
             padding: 20px;
         }
         .service-content h3 {
-            color: #0b2545;
+            color: #0f172a;
             margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .service-content p {
+            color: #64748b;
+            font-size: 0.95rem;
         }
         /* Contact Section */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            background: #0b2545;
+            background: #0f172a;
             color: #fff;
             padding: 50px;
             border-radius: 10px;
@@ -172,6 +178,7 @@
         @media(max-width: 768px) {
             .hero h1 { font-size: 2rem; }
             header { flex-direction: column; gap: 10px; }
+            .contact-container { padding: 25px; }
         }
     </style>
 </head>
@@ -208,7 +215,7 @@
         <div class="services-grid">
             
             <div class="service-card">
-                <img src="32843.jpg" alt="Control Panel Wiring">
+                <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=600&q=80" alt="Control Panel Wiring">
                 <div class="service-content">
                     <h3>Electrical Panel Installation</h3>
                     <p>Complete setup, testing, and maintenance of industrial power distribution and control panels.</p>
@@ -216,7 +223,7 @@
             </div>
 
             <div class="service-card">
-                <img src="vfd-work.jpg" alt="VFD Services">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="VFD Services">
                 <div class="service-content">
                     <h3>VFD Drives Service</h3>
                     <p>Expert VFD programming, parameter tuning, troubleshooting, and drive maintenance.</p>
@@ -224,7 +231,7 @@
             </div>
 
             <div class="service-card">
-                <img src="ac-work.jpg" alt="AC & Cooling Services">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="AC & Cooling Services">
                 <div class="service-content">
                     <h3>AC Installation & Maintenance</h3>
                     <p>Commercial and residential air conditioner installation, servicing, and gas charging.</p>
@@ -232,7 +239,7 @@
             </div>
 
             <div class="service-card">
-                <img src="34056.jpg" alt="Industrial Maintenance">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Industrial Maintenance">
                 <div class="service-content">
                     <h3>Industrial Wiring & AMC</h3>
                     <p>Comprehensive electrical maintenance contracts, wiring, rewiring, and plant safety upgrades.</p>
