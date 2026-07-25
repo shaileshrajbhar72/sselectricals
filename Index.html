@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S.S. Electricals - All Electrical Services & Online Payment</title>
-    <!-- Font Awesome Icons -->
+    <title>S.S Electrical - Industrial, Commercial & Automation Services</title>
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
+
         body {
             background-color: #f8fafc;
             color: #1e293b;
             line-height: 1.6;
-            padding-bottom: 70px;
+            padding-bottom: 70px; /* Space for bottom quick action bar on mobile */
         }
-        /* Header */
+
+        /* Top Header & Navigation */
         header {
             background: #0f172a;
             color: #fff;
-            padding: 15px 5%;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -32,277 +34,315 @@
             z-index: 1000;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
+
         .logo {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 800;
             color: #f59e0b;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
+
         .logo span {
             color: #38bdf8;
         }
+
         nav a {
             color: #f8fafc;
             text-decoration: none;
-            margin-left: 18px;
+            margin-left: 20px;
             font-weight: 600;
             transition: color 0.3s;
-            font-size: 0.95rem;
         }
+
         nav a:hover {
             color: #f59e0b;
         }
-        /* Hero */
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            color: #fff;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 80px 20px;
+            color: #fff;
+            padding: 0 20px;
         }
+
         .hero h1 {
-            font-size: 2.6rem;
-            margin-bottom: 8px;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
             color: #f59e0b;
         }
-        .owner-badge {
-            display: inline-block;
-            background: rgba(245, 158, 11, 0.15);
-            border: 1px solid #f59e0b;
-            color: #38bdf8;
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
+
         .hero p {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             max-width: 750px;
-            margin: 0 auto 25px;
-            color: #cbd5e1;
+            margin-bottom: 30px;
+            color: #e2e8f0;
         }
+
         .hero-btns {
             display: flex;
             gap: 15px;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
         }
+
         .btn {
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 26px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
             transition: 0.3s;
-            font-size: 0.95rem;
         }
-        .btn-call { background: #f59e0b; color: #0f172a; }
-        .btn-call:hover { background: #d97706; color: #fff; }
-        .btn-wa { background: #25d366; color: #fff; }
-        .btn-wa:hover { background: #128c7e; }
 
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+        .btn-primary {
+            background-color: #f59e0b;
+            color: #0f172a;
         }
+
+        .btn-primary:hover {
+            background-color: #d97706;
+            color: #fff;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: #fff;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+        }
+
+        /* Services Grid Section */
+        .container {
+            padding: 50px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
         .section-title {
             text-align: center;
             font-size: 2.2rem;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             color: #0f172a;
             position: relative;
         }
+
         .section-title::after {
             content: '';
-            display: block;
-            width: 70px;
+            width: 80px;
             height: 4px;
             background: #f59e0b;
+            display: block;
             margin: 10px auto 0;
             border-radius: 2px;
         }
 
-        /* About Box */
-        .about-card {
-            background: #ffffff;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 50px;
-            border-left: 6px solid #f59e0b;
-        }
-        .about-card h2 {
-            color: #0f172a;
-            margin-bottom: 12px;
-            font-size: 1.6rem;
-        }
-
-        /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            margin-bottom: 50px;
         }
-        .service-card {
+
+        .card {
             background: #fff;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-            border: 1px solid #e2e8f0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e2e8f0;
         }
-        .service-card:hover {
+
+        .card:hover {
             transform: translateY(-6px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.12);
         }
-        .service-card img {
+
+        .card img {
             width: 100%;
-            height: 210px;
+            height: 200px;
             object-fit: cover;
         }
-        .service-info {
-            padding: 22px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+
+        .card-content {
+            padding: 20px;
         }
-        .service-info h3 {
+
+        .card-content h3 {
+            font-size: 1.25rem;
             color: #0f172a;
-            font-size: 1.2rem;
             margin-bottom: 10px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
-        .service-info h3 i {
+
+        .card-content h3 i {
             color: #f59e0b;
         }
-        .service-info p {
+
+        .card-content p {
             color: #64748b;
             font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-        .btn-enquire {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: #0f172a;
-            color: #f59e0b;
-            padding: 10px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            border: 1px solid #f59e0b;
-            transition: all 0.3s;
-            width: 100%;
-        }
-        .btn-enquire:hover {
-            background: #f59e0b;
-            color: #0f172a;
         }
 
         /* Payment Section */
-        .payment-box {
-            background: #ffffff;
+        .payment-section {
+            background: #fff;
             border: 2px solid #f59e0b;
-            border-radius: 16px;
-            padding: 40px 25px;
-            margin-bottom: 50px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            border-radius: 15px;
+            padding: 40px 20px;
+            margin-top: 50px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            text-align: center;
         }
-        .payment-content {
+
+        .payment-box {
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
             justify-content: center;
-            gap: 40px;
+            align-items: center;
+            gap: 30px;
             margin-top: 25px;
         }
-        .qr-card {
-            background: #f8fafc;
-            border: 1px solid #cbd5e1;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            max-width: 260px;
+
+        .payment-info {
+            max-width: 400px;
+            text-align: left;
         }
-        .qr-card img {
-            width: 190px;
-            height: 190px;
-            border-radius: 8px;
-            background: #fff;
-            padding: 5px;
-        }
-        .payment-details {
-            max-width: 450px;
-        }
-        .payment-details p {
-            font-size: 1.05rem;
+
+        .payment-info p {
+            font-size: 1.1rem;
             margin-bottom: 12px;
             color: #334155;
         }
-        .payment-badge {
-            display: inline-block;
+
+        .upi-id {
             background: #f1f5f9;
-            border: 1px dashed #64748b;
-            padding: 8px 16px;
+            padding: 10px 15px;
             border-radius: 8px;
-            font-weight: 700;
+            font-weight: bold;
             color: #0f172a;
-            font-size: 1.1rem;
+            border: 1px dashed #94a3b8;
+            display: inline-block;
             margin-top: 5px;
         }
 
+        .pay-now-btn {
+            background-color: #22c55e;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .pay-now-btn:hover {
+            background-color: #16a34a;
+        }
+
+        .qr-card {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .qr-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 8px;
+        }
+
         /* Contact Section */
-        .contact-card {
+        .contact-section {
             background: #0f172a;
             color: #fff;
-            padding: 45px 30px;
-            border-radius: 14px;
+            padding: 50px 5%;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 35px;
-            margin-bottom: 40px;
+            gap: 30px;
+            margin-top: 30px;
         }
-        .contact-col h3 {
+
+        .contact-box h3 {
             color: #f59e0b;
-            font-size: 1.35rem;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
         }
+
         .contact-item {
             display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 14px;
-            font-size: 1.02rem;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
         }
+
         .contact-item i {
             color: #38bdf8;
-            font-size: 1.25rem;
-            margin-top: 3px;
-            width: 22px;
+            font-size: 1.3rem;
+            width: 25px;
         }
+
         .contact-item a {
             color: #fff;
             text-decoration: none;
         }
+
         .contact-item a:hover {
             color: #f59e0b;
         }
 
-        /* Mobile Bar */
-        .mobile-bottom-bar {
+        /* Direct Email Form */
+        .email-form input, .email-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            background: #1e293b;
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        .email-form button {
+            background: #f59e0b;
+            color: #0f172a;
+            border: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .email-form button:hover {
+            background: #d97706;
+            color: #fff;
+        }
+
+        /* Fixed Bottom Action Bar for Mobile */
+        .bottom-action-bar {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -311,313 +351,266 @@
             display: flex;
             justify-content: space-around;
             padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
             z-index: 2000;
-            border-top: 1px solid #1e293b;
         }
-        .bar-item {
+
+        .action-btn {
             color: #fff;
             text-decoration: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             font-weight: 600;
         }
-        .bar-item i { font-size: 1.3rem; margin-bottom: 2px; }
-        .bar-call i { color: #38bdf8; }
-        .bar-wa i { color: #25d366; }
-        .bar-pay i { color: #f59e0b; }
+
+        .action-btn i {
+            font-size: 1.3rem;
+            margin-bottom: 3px;
+        }
+
+        .action-call i { color: #38bdf8; }
+        .action-wa i { color: #25d366; }
+        .action-pay i { color: #f59e0b; }
 
         footer {
-            text-align: center;
             background: #020617;
             color: #94a3b8;
+            text-align: center;
             padding: 20px;
             font-size: 0.9rem;
         }
 
-        @media(max-width: 768px) {
-            header { flex-direction: column; gap: 10px; }
-            .hero h1 { font-size: 2rem; }
-            .payment-content { text-align: center; flex-direction: column; }
-            .contact-card { padding: 25px; }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .payment-info {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-        <div class="logo">S.S. <span>ELECTRICALS</span></div>
+        <div class="logo">S.S <span>ELECTRICAL</span></div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">All Services</a>
-            <a href="#payment">Payment Options</a>
-            <a href="#contact">Contact</a>
+            <a href="#services">Services</a>
+            <a href="#payment">Payment</a>
+            <a href="#contact">Contact Us</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>S.S. ELECTRICALS</h1>
-        <div class="owner-badge"><i class="fa-solid fa-user-tie"></i> Prop. Shailesh Kumar Rajbhar</div>
-        <p>Complete Industrial, Commercial & Residential Electrical Services, VFD Drives, Control Panels, Solar & Maintenance</p>
+        <h1>S.S ELECTRICAL</h1>
+        <p>Expert Industrial Electrical Maintenance, Automation, VFD, Commercial Wiring & Solar Solutions</p>
         <div class="hero-btns">
-            <a href="tel:+919670141002" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call: +91 9670141002</a>
-            <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20electrical%20service%20chahiye" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+            <a href="tel:+919670141002" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
+            <a href="https://wa.me/+919670141002/?text=Hello%20S.S%20Electrical,%20I%20need%20service" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
         </div>
     </section>
 
-    <div class="container">
-
-        <!-- About Us -->
-        <div class="about-card" id="about">
-            <h2>About S.S. Electricals</h2>
-            <p><strong>S.S. Electricals</strong> is an established electrical engineering and contracting firm under the leadership of <strong>Shailesh Kumar Rajbhar</strong>. We deliver end-to-end electrical solutions, including industrial wiring, VFD configuration, panel upgrades, LT equipment, solar off-grid systems, lighting, home automation, and emergency repair services across Jaunpur and nearby regions.</p>
-        </div>
-
-        <!-- All Services Section -->
-        <h2 class="section-title" id="services">Our Complete Electrical Services</h2>
+    <!-- Services Section -->
+    <div class="container" id="services">
+        <h2 class="section-title">Our Services</h2>
         
         <div class="services-grid">
             
-            <!-- 1. Complete Electrical Projects -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=600&q=80" alt="Complete Electrical Projects">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-city"></i> Complete Electrical Projects</h3>
-                        <p>Turnkey electrical contract execution for commercial complexes, industrial plants, residential societies, and infrastructure setups.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Complete%20Electrical%20Projects%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600" alt="Commercial Wiring">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-bolt"></i> Commercial Wiring & Lighting</h3>
+                    <p>Complete wiring, lighting installations, and power setup for commercial buildings and complexes.</p>
                 </div>
             </div>
 
-            <!-- 2. Power Connection -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80" alt="Power Connection">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-plug-circle-bolt"></i> Power Connection Services</h3>
-                        <p>Industrial three-phase power line connections, main line tapping, transformer cable linking, and meter panel integration.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Power%20Connection%20Services%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=600" alt="Industrial Automation">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-microchip"></i> Industrial Automation & Service</h3>
+                    <p>PLC programming, plant automation, relay logic setups, and complete industrial system maintenance.</p>
                 </div>
             </div>
 
-            <!-- 3. Backup Power and Load Management -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1590247819200-161485a2777b?auto=format&fit=crop&w=600&q=80" alt="Backup power and Load Management">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-charging-station"></i> Backup Power & Load Management</h3>
-                        <p>DG Synchronizing panels, automatic changeover switches (AMF/ATS), load balancing, and UPS/Generator backup setup.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Backup%20power%20and%20Load%20Management%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=600" alt="VFD Drives">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-sliders"></i> All VFD Installation & Service</h3>
+                    <p>Sales, drive programming, parameter tuning, troubleshooting, and repairs for all VFD brands.</p>
                 </div>
             </div>
 
-            <!-- 4. Home Electrical Service -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Home electrical Service">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-house-bolt"></i> Home Electrical Services</h3>
-                        <p>Residential house wiring, inverter connections, switchboard repair, MCB tripping fix, and safety earthing for modern homes.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Home%20electrical%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 4 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600" alt="AC Installation">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-snowflake"></i> AC Installation & Service</h3>
+                    <p>Split, Window, and Commercial Air Conditioner installation, gas refilling, and maintenance services.</p>
                 </div>
             </div>
 
-            <!-- 5. Industrial Electrical Service -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Industrial Electrical Service">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-industry"></i> Industrial Electrical Services</h3>
-                        <p>Factory motor wiring, heavy machinery power supplies, busbar trunking, earth pit construction, and plant electrification.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Industrial%20Electrical%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 5 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?q=80&w=600" alt="Solar Inverter">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-solar-panel"></i> Solar Inverter System Service</h3>
+                    <p>Complete rooftop solar inverter setup, installation, grid integration, and battery maintenance.</p>
                 </div>
             </div>
 
-            <!-- 6. Electrical Maintenance -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" alt="Electrical Maintenance">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-wrench"></i> Electrical Maintenance & AMC</h3>
-                        <p>Preventive maintenance contracts, breakdown emergency repair, contactor replacement, and plant safety inspection.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Electrical%20Maintenance%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 6 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600" alt="Machine Repairing">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-gears"></i> Industrial Machines Repairing</h3>
+                    <p>Expert electrical troubleshooting and control panel repairs for heavy manufacturing machinery.</p>
                 </div>
             </div>
 
-            <!-- 7. Wiring and Rewiring Service -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Wiring and rewiring Service">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-network-wired"></i> Wiring & Rewiring Services</h3>
-                        <p>Old house/factory wire replacement, conduit pipe fitting, cable tray laying, and fire-resistant concealed copper wiring.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Wiring%20and%20rewiring%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 7 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600" alt="Panel Wiring">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-diagram-project"></i> Electrical Panel Wiring</h3>
+                    <p>Custom MCC, PCC, APFC, and starter control panel designing, fabrication, and clean wiring work.</p>
                 </div>
             </div>
 
-            <!-- 8. Electrical Panel Upgrade -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=600&q=80" alt="Electrical Panel Upgrade">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-sliders"></i> Electrical Panel Upgrade</h3>
-                        <p>Main distribution board upgrade, MCC switchgear modification, ACB/MCCB replacement, Star-Delta & DOL panel setup.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Electrical%20Panel%20Upgrade%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 8 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?q=80&w=600" alt="Troubleshooting">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-triangle-exclamation"></i> Electrical Troubleshooting</h3>
+                    <p>Rapid fault finding, short-circuit recovery, cable testing, and emergency breakdown services.</p>
                 </div>
             </div>
 
-            <!-- 9. Lighting Installation and Repair -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=600&q=80" alt="Lighting Installation and Repair">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-regular fa-lightbulb"></i> Lighting Installation & Repair</h3>
-                        <p>LED high bay lights, commercial cove lighting, flood lights, architectural fixture fittings, and smart lighting repairs.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Lighting%20Installation%20and%20Repair%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 9 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?q=80&w=600" alt="Maintenance Service">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-wrench-screwdriver"></i> Maintenance Service (AMC)</h3>
+                    <p>Preventive maintenance contracts for factories, industries, and commercial establishments.</p>
                 </div>
             </div>
 
-            <!-- 10. LT Equipment Installation and Repair -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=600&q=80" alt="LT equipment installation and repair Service">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-gears"></i> LT Equipment Installation & Repair</h3>
-                        <p>LT switchgear, APFC capacitor banks, relay testing, voltage stabilizers, isolators, and heavy-duty contactors maintenance.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20LT%20equipment%20installation%20and%20repair%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 10 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600" alt="Batteries Selling">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-car-battery"></i> All Types Batteries Selling</h3>
+                    <p>Sales of high-quality tubular batteries, industrial battery banks, UPS batteries, and invertors.</p>
                 </div>
             </div>
 
-            <!-- 11. AC Installation and Service -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="AC installation and Service">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-snowflake"></i> AC Installation & Service</h3>
-                        <p>Split & Cassette AC fitting, copper piping work, gas refilling, jet wash service, and compressor breakdown servicing.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20AC%20installation%20and%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
-                </div>
-            </div>
-
-            <!-- 12. Solar Inverter System Installation and Service -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=600&q=80" alt="Solar inverter System Installation and Service">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-solar-panel"></i> Solar Inverter System Installation</h3>
-                        <p>Off-grid solar rooftops (Luminous NXG), solar panel wiring, MPPT charge controllers, battery bank setup & maintenance.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20Solar%20inverter%20System%20Installation%20and%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
-                </div>
-            </div>
-
-            <!-- 13. VFD Installation and Service -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="VFD Installation and Service">
-                <div class="service-info">
-                    <div>
-                        <h3><i class="fa-solid fa-microchip"></i> VFD Installation & Service</h3>
-                        <p>Variable Frequency Drive (VFD) parameter setup, speed control wiring, external terminal testing, and drive fault repair.</p>
-                    </div>
-                    <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20VFD%20Installation%20and%20Service%20ke%20bare%20me%20Enquiry%20karni%20hai" class="btn-enquire"><i class="fa-brands fa-whatsapp"></i> Enquiry Now</a>
+            <!-- Service 11 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=600" alt="Electrical Supplies">
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-plug"></i> Electrical Maintenance & Supplies</h3>
+                    <p>All types of electrical goods, switchgears, cables, MCCBs, and overall plant repair services.</p>
                 </div>
             </div>
 
         </div>
 
-        <!-- Payment System Section -->
-        <div class="payment-box" id="payment">
-            <h2 class="section-title" style="margin-bottom: 10px;">Online Payment System</h2>
-            <p style="text-align: center; color: #64748b;">Aap kisi bhi UPI App (PhonePe, Google Pay, Paytm, BHIM) se aasaani se online payment kar sakte hain.</p>
+        <!-- Payment Section -->
+        <div class="payment-section" id="payment">
+            <h2 class="section-title" style="margin-bottom: 15px;">Online Payment Options</h2>
+            <p style="color: #64748b;">Aap kisi bhi UPI App (GPay, PhonePe, Paytm) se online payment kar sakte hain.</p>
             
-            <div class="payment-content">
+            <div class="payment-box">
+                <!-- QR Code Display -->
                 <div class="qr-card">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=9670141002@upi&pn=Shailesh%20Kumar%20Rajbhar" alt="S.S Electrical Payment QR Code">
-                    <p style="margin-top: 10px; font-weight: 700; color: #0f172a; font-size: 0.95rem;">Scan & Pay via Any App</p>
-                    <small style="color: #64748b;">Instant Payment Confirmation</small>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=9670141002@upi&pn=S.S%20Electrical" alt="S.S Electrical Payment QR Code">
+                    <p style="margin-top: 8px; font-weight: 600; font-size: 0.9rem;">Scan & Pay via Any App</p>
                 </div>
 
-                <div class="payment-details">
-                    <p><i class="fa-solid fa-mobile-screen-button" style="color: #f59e0b;"></i> <strong>GPay / PhonePe / Paytm Number:</strong></p>
-                    <p style="font-size: 1.4rem; font-weight: 800; color: #0f172a;">+91 9670141002</p>
+                <!-- Direct UPI Details -->
+                <div class="payment-info">
+                    <p><i class="fa-brands fa-google-pay" style="color: #4285F4; font-size: 1.5rem;"></i> <strong>Google Pay / PhonePe / Paytm:</strong></p>
+                    <p style="font-size: 1.3rem; color: #0f172a; font-weight: 700;">+91 9670141002</p>
                     
-                    <p style="margin-top: 15px;"><i class="fa-solid fa-qrcode" style="color: #f59e0b;"></i> <strong>UPI ID:</strong></p>
-                    <div class="payment-badge">9670141002@upi</div>
-
-                    <p style="margin-top: 20px;"><i class="fa-solid fa-user-check" style="color: #25d366;"></i> <strong>Account Name:</strong> Shailesh Kumar Rajbhar</p>
-                    
+                    <p style="margin-top: 15px;"><strong>UPI ID:</strong></p>
+                    <div class="upi-id">9670141002@upi</div>
                     <br>
-                    <a href="upi://pay?pa=9670141002@upi&pn=Shailesh%20Kumar%20Rajbhar" class="btn btn-call" style="background: #22c55e; color: white;">
-                        <i class="fa-solid fa-wallet"></i> Pay Now directly on Mobile App
+                    <!-- Clickable Mobile Payment Link -->
+                    <a href="upi://pay?pa=9670141002@upi&pn=S.S%20Electrical" class="pay-now-btn">
+                        <i class="fa-solid fa-wallet"></i> Pay Now via UPI App
                     </a>
                 </div>
             </div>
         </div>
 
         <!-- Contact Section -->
-        <div class="contact-card" id="contact">
-            <div class="contact-col">
-                <h3>Contact S.S. Electricals</h3>
-                <div class="contact-item">
-                    <i class="fa-solid fa-user-tie"></i>
-                    <span><strong>Proprietor:</strong> Shailesh Kumar Rajbhar<br><small style="color: #94a3b8;</small></span>
+        <div class="contact-section" id="contact">
+            <h2 style="text-align: center; color: #f59e0b; margin-bottom: 20px;">Contact S.S Electrical</h2>
+            
+            <div class="contact-grid">
+                <!-- Direct Info -->
+                <div class="contact-box">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+919670141002">+919670141002</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/+919670141002?text=Hello%20S.S%20Electrical">WhatsApp Message Karein</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:sselectricalservice95@gmail.com">sselectricalservice95@gmail.com</a>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Kalapur, Khetasarai, Shahganj, Jaunpur, Uttar Pradesh, India - 222139</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <a href="tel:+919670141002">+91 9670141002</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:sselectricalservice95@gmail.com">sselectricalservice95@gmail.com</a>
-                </div>
-            </div>
 
-            <div class="contact-col">
-                <h3>Quick Service Booking</h3>
-                <p style="color: #cbd5e1; margin-bottom: 20px;">VFD breakdown, Control panel repair ya AC installation ke liye direct WhatsApp par message karein:</p>
-                <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji,%20mujhe%20service%20chahiye" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> Book Service on WhatsApp</a>
+                <!-- Direct Email Message Form -->
+                <div class="contact-box">
+                    <h3>Send Direct Email</h3>
+                    <!-- Formspree Service for direct email delivery -->
+                    <form action="https://formspree.io/f/xbjnqkyw" method="POST" class="email-form">
+                        <input type="text" name="name" placeholder="Aapka Naam (Your Name)" required>
+                        <input type="tel" name="phone" placeholder="Mobile Number" required>
+                        <textarea name="message" rows="4" placeholder="Kya kaam karwana hai? (Your Requirement)" required></textarea>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
 
     </div>
 
-    <!-- Mobile Quick Bar -->
-    <div class="mobile-bottom-bar">
-        <a href="tel:+919670141002" class="bar-item bar-call">
+    <!-- Quick Bottom Action Bar for Mobile -->
+    <div class="bottom-action-bar">
+        <a href="tel:+919670141002" class="action-btn action-call">
             <i class="fa-solid fa-phone"></i>
             <span>Call</span>
         </a>
-        <a href="https://wa.me/+919670141002?text=Hello%20Shailesh%20Ji" class="bar-item bar-wa">
+        <a href="https://wa.me/+919670141002?text=Hello%20S.S%20Electrical" class="action-btn action-wa">
             <i class="fa-brands fa-whatsapp"></i>
             <span>WhatsApp</span>
         </a>
-        <a href="#payment" class="bar-item bar-pay">
+        <a href="#payment" class="action-btn action-pay">
             <i class="fa-solid fa-qrcode"></i>
-            <span>Payment</span>
+            <span>Pay Now</span>
         </a>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 S.S. Electricals. All Rights Reserved. | Prop. Shailesh Kumar Rajbhar</p>
+        <p>&copy; 2026 S.S Electrical. All Rights Reserved.</p>
     </footer>
 
 </body>
